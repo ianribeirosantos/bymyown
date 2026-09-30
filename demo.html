@@ -20,8 +20,7 @@
 
   <div class="ui container" id="topo">
 
-    <!-- ============ 1. MENU ============ -->
-    <!-- MUDE AQUI: "secondary pointing" -> "tabular", "vertical", "inverted"; adicione outro <a class="item"> -->
+
     <section id="menu">
       <h2 class="ui dividing header">1. menu</h2>
       <div class="ui inverted menu" id="menu-demo">
@@ -34,8 +33,6 @@
       </div>
     </section>
 
-    <!-- ============ 2. CARD ============ -->
-    <!-- MUDE AQUI: cor ("red card" -> "blue card"), "three" -> "two"/"four", texto, ícones -->
     <section id="card">
       <h2 class="ui dividing header">2. cards</h2>
       <div class="ui three stackable cards">
@@ -71,8 +68,6 @@
       </div>
     </section>
 
-    <!-- ============ 3. ACCORDION ============ -->
-    <!-- MUDE AQUI: copie um bloco title + content para criar outro item; tire "styled" ou "fluid"; use "exclusive: false" no JS -->
     <section id="accordion">
       <h2 class="ui dividing header">3. mensagens expansiveis (accordion)</h2>
       <div class="ui styled fluid accordion">
@@ -86,8 +81,6 @@
       </div>
     </section>
 
-    <!-- ============ 4. MESSAGE ============ -->
-    <!-- MUDE AQUI: "info" -> "success", "warning", "error"; adicione "icon" ou "compact"; o X fecha a mensagem -->
     <section id="message">
       <h2 class="ui dividing header">4. possíveis mensagens</h2>
       <div class="ui info message">
@@ -107,8 +100,7 @@
       </div>
     </section>
 
-    <!-- ============ 5. STATISTIC ============ -->
-    <!-- MUDE AQUI: "four" -> "three"; "small" -> "large"; adicione "horizontal"; cor: "red statistic" -->
+
     <section id="statistic">
       <h2 class="ui dividing header">5. dados/estatisticas</h2>
       <div class="ui four small statistics">
@@ -131,8 +123,7 @@
       </div>
     </section>
 
-    <!-- ============ 6. RATING ============ -->
-    <!-- MUDE AQUI: "star" -> "heart"; data-rating (nota inicial); data-max-rating (total); "massive", "large" -->
+  
     <section id="rating">
       <h2 class="ui dividing header">6. avaliações</h2>
       <p>avalie ribeiro:</p>
@@ -141,8 +132,7 @@
       <div class="ui large red heart rating" data-rating="4" data-max-rating="5"></div>
     </section>
 
-    <!-- ============ 7. PROGRESS ============ -->
-    <!-- MUDE AQUI: data-percent (valor); "indicating" muda a cor conforme avança; "green", "red", "small" -->
+   
     <section id="progress">
       <h2 class="ui dividing header">7. progresso</h2>
       <div class="ui indicating progress" data-percent="30">
@@ -162,17 +152,14 @@
   </div>
 
   <script>
-    // Componentes com comportamento precisam ser "ligados" via JS:
-    $('.ui.accordion').accordion();          // abre/fecha
-    $('.ui.rating').rating();                // deixa clicável
-    $('.ui.progress').progress();            // lê o data-percent e preenche a barra
+    $('.ui.accordion').accordion();        
+    $('.ui.rating').rating();                
+    $('.ui.progress').progress();           
 
-    // Fecha a mensagem ao clicar no X (com animação de fade)
     $('.message .close').on('click', function () {
       $(this).closest('.message').transition('fade');
     });
 
-    // Troca o item ativo do menu ao clicar
     $('#menu-demo .item').on('click', function () {
       $(this).addClass('active').siblings('.item').removeClass('active');
     });
