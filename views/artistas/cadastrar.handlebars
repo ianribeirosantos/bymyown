@@ -1,0 +1,20 @@
+<h2 class="ui header">Cadastrar Artista</h2>
+<form class="ui form" action="/artistas" method="POST">
+  <div class="two fields"> 
+    <div class="field"><label>Nome</label><input type="text" name="nome" required></div>
+    <div class="field"><label>Nome Artístico</label><input type="text" name="nomeArtistico"></div>
+  </div>
+  <div class="field"><label>Data de nascimento</label><input type="date" name="anoNascimento"></div>
+  <div class="field"><label>URL da foto</label><input type="text" name="foto" placeholder="https://..."></div>
+
+
+  <div class="field">
+    <div class="ui checkbox">
+      <input type="checkbox" name="emAtividade">
+      <label>Em atividade</label>
+    </div>
+  </div>
+
+  <button class="ui primary button" type="submit">Cadastrar</button>
+  <a class="ui button" href="/artistas">Cancelar</a>
+</form>

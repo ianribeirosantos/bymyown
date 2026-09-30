@@ -1,0 +1,21 @@
+<h2 class="ui header">Lista de Fichas Técnicas</h2>
+<a class="ui primary button" href="/fichas/cadastrar"><i class="plus icon"></i> Cadastrar Ficha</a>
+
+{{#if fichas.length}}
+<table class="ui celled striped table">
+  <thead><tr><th>Filme</th><th>Duração (min)</th><th>Orçamento</th><th>Bilheteria</th><th>Ações</th></tr></thead>
+  <tbody>
+    {{#each fichas}}
+    <tr>
+      <td>{{this.filme.nome}}</td>
+      <td>{{this.duracaoMinutos}}</td>
+      <td>{{this.orcamento}}</td>
+      <td>{{this.bilheteria}}</td>
+      <td><a href="/fichas/{{this.id}}">Detalhar</a></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{else}}
+<div class="ui info message"><div class="header">Nenhuma ficha cadastrada</div></div>
+{{/if}}

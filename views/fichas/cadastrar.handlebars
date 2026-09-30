@@ -1,0 +1,19 @@
+<h2 class="ui header">Cadastrar Ficha Técnica</h2>
+<form class="ui form" action="/fichas" method="POST">
+  <div class="field">
+    <label>Filme</label>
+    <select name="filmeId" class="ui search dropdown" required>
+      <option value="">Selecione o filme</option>
+      {{#each filmes}}
+      <option value="{{this.id}}">{{this.nome}}</option>
+      {{/each}}
+    </select>
+  </div>
+  <div class="three fields">
+    <div class="field"><label>Duração (min)</label><input type="number" name="duracaoMinutos"></div>
+    <div class="field"><label>Orçamento</label><input type="number" step="any" name="orcamento"></div>
+    <div class="field"><label>Bilheteria</label><input type="number" step="any" name="bilheteria"></div>
+  </div>
+  <button class="ui primary button" type="submit">Cadastrar</button>
+  <a class="ui button" href="/fichas">Cancelar</a>
+</form>

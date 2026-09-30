@@ -1,0 +1,10 @@
+<h2 class="ui header">Editar Ficha Técnica: {{ficha.filme.nome}}</h2>
+<form class="ui form" action="/fichas/{{ficha.id}}?_method=PUT" method="POST">
+  <div class="three fields">
+    <div class="field"><label>Duração (min)</label><input type="number" name="duracaoMinutos" value="{{ficha.duracaoMinutos}}"></div>
+    <div class="field"><label>Orçamento</label><input type="number" step="any" name="orcamento" value="{{ficha.orcamento}}"></div>
+    <div class="field"><label>Bilheteria</label><input type="number" step="any" name="bilheteria" value="{{ficha.bilheteria}}"></div>
+  </div>
+  <button class="ui primary button" type="submit">Salvar</button>
+  <a class="ui button" href="/fichas/{{ficha.id}}">Cancelar</a>
+</form>

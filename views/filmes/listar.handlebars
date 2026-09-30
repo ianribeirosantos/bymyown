@@ -1,0 +1,27 @@
+<h2 class="ui header">Lista de Filmes</h2>
+<a class="ui primary button" href="/filmes/cadastrar"><i class="plus icon"></i> Cadastrar Filme</a>
+
+{{#if filmes.length}}
+
+  <table class="ui celled striped table">
+    <thead>
+      <tr><th>Nome</th><th>Ano</th><th>Diretor</th><th>Ações</th></tr>
+    </thead>
+    <tbody>
+      {{#each filmes}}
+      <tr>
+        <td>{{this.nome}}</td>
+        <td>{{this.ano}}</td>
+        <td>{{this.diretor.nome}}</td>
+        <td><a href="/filmes/{{this.id}}">Detalhar</a></td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+
+  <div class="ui info message">
+    <div class="header">Nenhum filme cadastrado</div>
+    <p>Clique em "Cadastrar Filme" para adicionar o primeiro.</p>
+  </div>
+{{/if}}

@@ -1,0 +1,23 @@
+<div class="ui breadcrumb">
+  <a class="section" href="/diretores">Diretores</a>
+  <i class="right angle icon divider"></i>
+  <div class="active section">{{diretor.nome}}</div>
+</div>
+
+<div class="ui fluid card" style="margin-top:1em">
+  <div class="content">
+    <div class="header">{{diretor.nome}}</div>
+    <div class="meta">{{diretor.nacionalidade}}</div>
+    <div class="description">Nascimento: {{diretor.anoNascimento}}</div>
+  </div>
+</div>
+
+<h3 class="ui header">Filmes dirigidos</h3>
+<div class="ui relaxed divided list">
+  {{#each diretor.filmes}}
+  <div class="item">
+    <i class="film icon"></i>
+    <div class="content"><a class="header" href="/filmes/{{this.id}}">{{this.nome}}</a> ({{this.ano}})</div>
+  </div>
+  {{/each}}
+</div>

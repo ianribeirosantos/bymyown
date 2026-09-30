@@ -1,0 +1,18 @@
+<div class="ui breadcrumb">
+  <a class="section" href="/fichas">Fichas Técnicas</a>
+  <i class="right angle icon divider"></i>
+  <div class="active section">{{ficha.filme.nome}}</div>
+</div>
+
+<div class="ui fluid card" style="margin-top:1em">
+  <div class="content">
+    <div class="header">Ficha Técnica: {{ficha.filme.nome}}</div>
+  </div>
+  <div class="content">
+    <div class="ui three small statistics">
+      <div class="statistic"><div class="value">{{ficha.duracaoMinutos}}</div><div class="label">Minutos</div></div>
+      <div class="statistic"><div class="value">{{ficha.orcamento}}</div><div class="label">Orçamento</div></div>
+      <div class="statistic"><div class="value">{{ficha.bilheteria}}</div><div class="label">Bilheteria</div></div>
+    </div>
+  </div>
+</div>

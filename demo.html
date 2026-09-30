@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>frameworks - Ian </title>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.4/dist/semantic.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.4/dist/semantic.min.js"></script>
+
+  <style>
+    body { padding-top: 4.5em; }
+    section { margin-bottom: 3.5em; }
+  </style>
+</head>
+<body>
+
+
+
+  <div class="ui container" id="topo">
+
+    <!-- ============ 1. MENU ============ -->
+    <!-- MUDE AQUI: "secondary pointing" -> "tabular", "vertical", "inverted"; adicione outro <a class="item"> -->
+    <section id="menu">
+      <h2 class="ui dividing header">1. menu</h2>
+      <div class="ui inverted menu" id="menu-demo">
+        <a class="active item"><i class="home icon"></i> Início</a>
+        <a class="item"><i class="video icon"></i> Filmes</a>
+        <a class="item"><i class="user icon"></i> Artistas</a>
+        <div class="right menu">
+          <a class="item"><i class="search icon"></i> Buscar</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2. CARD ============ -->
+    <!-- MUDE AQUI: cor ("red card" -> "blue card"), "three" -> "two"/"four", texto, ícones -->
+    <section id="card">
+      <h2 class="ui dividing header">2. cards</h2>
+      <div class="ui three stackable cards">
+        <div class="card">
+          <div class="content">
+            <i class="right floated star icon"></i>
+            <div class="header">Go For It, Nakamura!</div>
+            <div class="meta">2026 - Romance Escolar</div>
+            <div class="description">Nakamura é um garoto muito tímido e apaixonado por um colega de classe. Mas, por causa de sua personalidade, não consegue nem dizer um simples “olá” para o cara que gosta, acompanhe como o nakamura fara para superar sua timidez</div>
+          </div>
+          <div class="extra content"><i class="clock icon"></i> 169 minutos</div>
+        </div>
+
+        <div class="red card">
+          <div class="content">
+            <i class="right floated star icon"></i>
+            <div class="header">Parasita</div>
+            <div class="meta">2019 - Suspense</div>
+            <div class="description">Uma família pobre se infiltra, aos poucos, na casa de uma família rica.</div>
+          </div>
+          <div class="extra content"><i class="clock icon"></i> 132 minutos</div>
+        </div>
+
+        <div class="green card">
+          <div class="content">
+            <i class="right floated star icon"></i>
+            <div class="header">Central do Brasil</div>
+            <div class="meta">1998 - Drama</div>
+            <div class="description">Uma ex-professora e um menino atravessam o país em busca do pai dele.</div>
+          </div>
+          <div class="extra content"><i class="clock icon"></i> 110 minutos</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. ACCORDION ============ -->
+    <!-- MUDE AQUI: copie um bloco title + content para criar outro item; tire "styled" ou "fluid"; use "exclusive: false" no JS -->
+    <section id="accordion">
+      <h2 class="ui dividing header">3. mensagens expansiveis (accordion)</h2>
+      <div class="ui styled fluid accordion">
+        <div class="title"><i class="dropdown icon"></i> O que é a vida?</div>
+        <div class="content"><p>uma maravilha.</p></div>
+
+        <div class="title"><i class="dropdown icon"></i> O que é uma Ficha Técnica?</div>
+        <div class="content"><p>é uma ficha com tecnicas escritas</p></div>
+
+
+      </div>
+    </section>
+
+    <!-- ============ 4. MESSAGE ============ -->
+    <!-- MUDE AQUI: "info" -> "success", "warning", "error"; adicione "icon" ou "compact"; o X fecha a mensagem -->
+    <section id="message">
+      <h2 class="ui dividing header">4. possíveis mensagens</h2>
+      <div class="ui info message">
+        <i class="close icon"></i>
+        <div class="header">filme cadastrado</div>
+        <p>O filme foi salvo</p>
+      </div>
+      <div class="ui warning message">
+        <i class="close icon"></i>
+        <div class="header">sem ficha técnica</div>
+        <p>eese filme ainda não tem ficha técnica</p>
+      </div>
+      <div class="ui error message">
+        <i class="close icon"></i>
+        <div class="header">error</div>
+        <p>o nome está vazio</p>
+      </div>
+    </section>
+
+    <!-- ============ 5. STATISTIC ============ -->
+    <!-- MUDE AQUI: "four" -> "three"; "small" -> "large"; adicione "horizontal"; cor: "red statistic" -->
+    <section id="statistic">
+      <h2 class="ui dividing header">5. dados/estatisticas</h2>
+      <div class="ui four small statistics">
+        <div class="statistic">
+          <div class="value">67</div>
+          <div class="label">Filmes</div>
+        </div>
+        <div class="blue statistic">
+          <div class="value"><i class="user icon"></i> 128</div>
+          <div class="label">Artistas</div>
+        </div>
+        <div class="green statistic">
+          <div class="value">15</div>
+          <div class="label">Diretores</div>
+        </div>
+        <div class="red statistic">
+          <div class="value">169</div>
+          <div class="label">Minutos (maior filme)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. RATING ============ -->
+    <!-- MUDE AQUI: "star" -> "heart"; data-rating (nota inicial); data-max-rating (total); "massive", "large" -->
+    <section id="rating">
+      <h2 class="ui dividing header">6. avaliações</h2>
+      <p>avalie ribeiro:</p>
+      <div class="ui large star rating" data-rating="3" data-max-rating="5"></div>
+      <p style="margin-top:1em">e o quanto voce me ama?:</p>
+      <div class="ui large red heart rating" data-rating="4" data-max-rating="5"></div>
+    </section>
+
+    <!-- ============ 7. PROGRESS ============ -->
+    <!-- MUDE AQUI: data-percent (valor); "indicating" muda a cor conforme avança; "green", "red", "small" -->
+    <section id="progress">
+      <h2 class="ui dividing header">7. progresso</h2>
+      <div class="ui indicating progress" data-percent="30">
+        <div class="bar"><div class="progress"></div></div>
+        <div class="label">vadastro de filmes</div>
+      </div>
+      <div class="ui indicating progress" data-percent="65">
+        <div class="bar"><div class="progress"></div></div>
+        <div class="label">fichas tecnicas</div>
+      </div>
+      <div class="ui green progress" data-percent="100">
+        <div class="bar"><div class="progress"></div></div>
+        <div class="label">concluido</div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    // Componentes com comportamento precisam ser "ligados" via JS:
+    $('.ui.accordion').accordion();          // abre/fecha
+    $('.ui.rating').rating();                // deixa clicável
+    $('.ui.progress').progress();            // lê o data-percent e preenche a barra
+
+    // Fecha a mensagem ao clicar no X (com animação de fade)
+    $('.message .close').on('click', function () {
+      $(this).closest('.message').transition('fade');
+    });
+
+    // Troca o item ativo do menu ao clicar
+    $('#menu-demo .item').on('click', function () {
+      $(this).addClass('active').siblings('.item').removeClass('active');
+    });
+  </script>
+</body>
+</html>

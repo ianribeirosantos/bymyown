@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sistema de Filmes</title>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.4/dist/semantic.min.css">
+ 
+  <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.4/dist/semantic.min.js"></script>
+</head>
+<body>
+
+  <div class="ui inverted menu">
+    <div class="ui container">
+      <a class="item" href="/filmes">Filmes</a>
+      <a class="item" href="/artistas">Artistas</a>
+      <a class="item" href="/diretores">Diretores</a>
+      <a class="item" href="/fichas">Fichas Técnicas</a>
+    </div>
+  </div>
+
+  <div class="ui container" style="margin-top: 2em; margin-bottom: 2em;">
+    {{{body}}} 
+  </div>
+
+  <script>
+
+    $('.ui.dropdown').dropdown();
+    $('.ui.accordion').accordion();
+  </script>
+</body>
+</html>

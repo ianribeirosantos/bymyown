@@ -1,0 +1,21 @@
+<h2 class="ui header">Lista de Artistas</h2>
+<a class="ui primary button" href="/artistas/cadastrar"><i class="plus icon"></i> Cadastrar Artista</a>
+
+{{#if artistas.length}}
+<table class="ui celled striped table">
+  <thead><tr><th>Nome</th><th>Nome Artístico</th><th>Nascimento</th><th>Em atividade</th><th>Ações</th></tr></thead>
+  <tbody>
+    {{#each artistas}}
+    <tr>
+      <td>{{this.nome}}</td>
+      <td>{{this.nomeArtistico}}</td>
+      <td>{{this.anoNascimento}}</td>
+      <td>{{#if this.emAtividade}}<i class="green check icon"></i>{{else}}<i class="red times icon"></i>{{/if}}</td>
+      <td><a href="/artistas/{{this.id}}">Detalhar</a></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{else}}
+<div class="ui info message"><div class="header">Nenhum artista cadastrado</div></div>
+{{/if}}

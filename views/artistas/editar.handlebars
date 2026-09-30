@@ -1,0 +1,19 @@
+<h2 class="ui header">Editar Artista</h2>
+
+<form class="ui form" action="/artistas/{{artista.id}}?_method=PUT" method="POST">
+  <div class="two fields">
+    <div class="field"><label>Nome</label><input type="text" name="nome" value="{{artista.nome}}" required></div>
+    <div class="field"><label>Nome Artístico</label><input type="text" name="nomeArtistico" value="{{artista.nomeArtistico}}"></div>
+  </div>
+  <div class="field"><label>Data de nascimento</label><input type="date" name="anoNascimento" value="{{artista.anoNascimento}}"></div>
+  <div class="field"><label>URL da foto</label><input type="text" name="foto" value="{{artista.foto}}"></div>
+  <div class="field">
+    <div class="ui checkbox">
+   
+      <input type="checkbox" name="emAtividade" {{#if artista.emAtividade}}checked{{/if}}>
+      <label>Em atividade</label>
+    </div>
+  </div>
+  <button class="ui primary button" type="submit">Salvar</button>
+  <a class="ui button" href="/artistas/{{artista.id}}">Cancelar</a>
+</form>

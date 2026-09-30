@@ -1,0 +1,20 @@
+<h2 class="ui header">Lista de Diretores</h2>
+<a class="ui primary button" href="/diretores/cadastrar"><i class="plus icon"></i> Cadastrar Diretor</a>
+
+{{#if diretores.length}}
+<table class="ui celled striped table">
+  <thead><tr><th>Nome</th><th>Nascimento</th><th>Nacionalidade</th><th>Ações</th></tr></thead>
+  <tbody>
+    {{#each diretores}}
+    <tr>
+      <td>{{this.nome}}</td>
+      <td>{{this.anoNascimento}}</td>
+      <td>{{this.nacionalidade}}</td>
+      <td><a href="/diretores/{{this.id}}">Detalhar</a></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{else}}
+<div class="ui info message"><div class="header">Nenhum diretor cadastrado</div></div>
+{{/if}}

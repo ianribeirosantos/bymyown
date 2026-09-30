@@ -1,0 +1,45 @@
+<!-- COMPONENTE: breadcrumb (trilha de navegação) -->
+<div class="ui breadcrumb">
+  <a class="section" href="/filmes">Filmes</a>
+  <i class="right angle icon divider"></i>
+  <div class="active section">{{filme.nome}}</div>
+</div>
+
+<!-- COMPONENTE: card -->
+<div class="ui fluid card" style="margin-top:1em">
+  <div class="content">
+    <div class="header">{{filme.nome}}</div>
+    <div class="meta">{{filme.ano}}</div>
+    <div class="description">
+      <p><strong>Diretor:</strong> {{filme.diretor.nome}}</p>
+    </div>
+  </div>
+  <div class="extra content">
+
+    {{#each filme.artistas}}
+      <a class="ui blue label" href="/artistas/{{this.id}}"><i class="user icon"></i> {{this.nome}}</a>
+    {{/each}}
+  </div>
+</div>
+
+{{#if filme.fichaTecnica}}
+
+<div class="ui styled fluid accordion">
+  <div class="title"><i class="dropdown icon"></i> Ficha Técnica</div>
+  <div class="content">
+
+    <div class="ui three small statistics">
+      <div class="statistic"><div class="value">{{filme.fichaTecnica.duracaoMinutos}}</div><div class="label">Minutos</div></div>
+      <div class="statistic"><div class="value">{{filme.fichaTecnica.orcamento}}</div><div class="label">Orçamento</div></div>
+      <div class="statistic"><div class="value">{{filme.fichaTecnica.bilheteria}}</div><div class="label">Bilheteria</div></div>
+    </div>
+  </div>
+</div>
+{{/if}}
+
+<div style="margin-top:1em">
+  <a class="ui button" href="/filmes/{{filme.id}}/editar">Editar</a>
+  <form action="/filmes/{{filme.id}}?_method=DELETE" method="POST" style="display:inline">
+    <button class="ui red button" type="submit">Excluir</button>
+  </form>
+</div>

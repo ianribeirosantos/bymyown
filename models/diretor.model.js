@@ -19,7 +19,7 @@ const Diretor = sequelize.define(
     },
     {
     tableName: 'Diretores',
-    timestamps: true // o Sequelize vai preencher as colunas createdAt e updatedAt com a data e hora exata daquele momento.
+    timestamps: true 
     }
 )
 

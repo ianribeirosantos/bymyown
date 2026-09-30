@@ -1,0 +1,35 @@
+<h2 class="ui header">Cadastrar Filme</h2>
+
+
+<form class="ui form" action="/filmes" method="POST">
+  <div class="field">
+    <label>Nome do Filme</label>
+    <input type="text" name="nome" required>
+  </div>
+  <div class="field">
+    <label>Ano</label>
+    <input type="number" name="ano" required>
+  </div>
+
+  <div class="field">
+    <label>Diretor</label>
+    <select name="diretorId" class="ui search dropdown">
+      <option value="">Selecione um diretor</option>
+      {{#each diretores}}
+      <option value="{{this.id}}">{{this.nome}}</option>
+      {{/each}}
+    </select>
+  </div>
+  <div class="field">
+    <label>Artistas</label>
+    <select name="artistasIds" multiple class="ui fluid search dropdown">
+      <option value="">Selecione os artistas</option>
+      {{#each artistas}}
+      <option value="{{this.id}}">{{this.nome}}</option>
+      {{/each}}
+    </select>
+  </div>
+
+  <button class="ui primary button" type="submit">Cadastrar</button>
+  <a class="ui button" href="/filmes">Cancelar</a>
+</form>
